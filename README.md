@@ -1,4 +1,4 @@
-⚡ DC-DC Converter Designer
+**⚡ DC-DC Converter Designer**
 
 Design, simulate, and validate power converters without the headache of manual spreadsheet iterations. This tool is built to bridge the gap between theoretical power electronics and practical hardware design.
 
