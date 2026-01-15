@@ -13,33 +13,29 @@ Interactive **Power Electronics** design tool built with **Streamlit** + **Plotl
 
 pip install streamlit numpy plotly
 streamlit run app.py
-
+//
 Usage
-Design Specs: Set Vin, Vout, power, frequency, ripple targets
+1. Design Specs: Set Vin, Vout, power, frequency, ripple targets
 
-Core Selection: Pick material or custom parameters
+2. Core Selection: Pick material or custom parameters
 
-View Results: Electrical + magnetic design parameters
+3. View Results: Electrical + magnetic design parameters
 
-Simulate: Toggle waveforms to see transient behavior
-
+4. Simulate: Toggle waveforms to see transient behavior
+//
 Educational Value
-Perfect for power electronics classes:
-
+1. Perfect for power electronics classes:
 Visualize inductor current ripple vs saturation
-
 See flux density vs core limits
-
 Understand Buck vs Boost waveforms
-
 Real-time design iteration
-
+//
 Tech Stack
-Python + Streamlit
+1. Python + Streamlit
 
-Plotly for interactive charts
+2. Plotly for interactive charts
 
-NumPy for calculations
+3. NumPy for calculations
 
 License
 MIT License - see LICENSE © 2026
