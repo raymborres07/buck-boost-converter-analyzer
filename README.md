@@ -1,79 +1,91 @@
-**⚡ DC-DC Converter Designer**
+# ⚡ DC-DC Converter Designer
 
-Design, simulate, and validate power converters without the headache of manual spreadsheet iterations. This tool is built to bridge the gap between theoretical power electronics and practical hardware design.
+Design, simulate, and validate **power converters** without the headache of manual spreadsheet iterations. This interactive tool bridges the gap between theoretical circuit design and real-world hardware validation — so you can focus on insights, not formulas.
 
-🌟 Why I Built This
+Made with ⚙️ by **Raymond Borres™**
 
-Let’s be honest: calculating inductor ripple, checking core saturation, and verifying switching stresses usually involves jumping between three different datasheets and a messy Excel file.
+---
 
-I built this tool to centralize that workflow. It lets you tweak your specs on the fly and immediately see how your choices impact the magnetic flux density ($B_{max}$) and the electrical waveforms.
+## 🌟 Why I Built This
 
-🚀 Key Features
+Let’s be honest — calculating inductor ripple, checking core saturation, and verifying switching stresses usually means juggling multiple datasheets, obscure calculator tabs, and that overgrown Excel file from last semester.
 
-Dual Topology Support: Fully interactive calculators for both Buck and Boost converters.
+I built this app to **centralize** that entire workflow. You can adjust converter parameters on the fly and instantly visualize the impact on magnetic flux density (\(B_{max}\)), inductor current, switching waveforms, and output regulation. It's designed to make **power converter design intuitive and visual** — the way it should be.
 
-Magnetic Design Suite:
+---
 
-Calculate necessary Turns ($N$) and air gap lengths.
+## 🚀 Key Features
 
-Saturation Check: Automatic flux density gauging to ensure your core remains in the linear region.
+* **⚙️ Dual Topology Support**
+  * Fully interactive design environments for both **Buck** and **Boost** converters.
 
-Interactive Simulation:
+* **🧲 Magnetic Design Suite**
+  * Compute required turns (\(N\)) and air gap lengths automatically.
+  * Built-in **saturation check** evaluates \(B_{max}\) in real time to ensure your core stays within the linear region.
 
-High-resolution Plotly waveforms for Inductor Current ($I_L$) and Output Voltage ($V_{out}$).
+* **📊 Interactive Simulation**
+  * **High-resolution Plotly charts** visualize:
+    * Inductor Current (\(I_L\))
+    * Output Voltage (\(V_{out}\))
+    * Switching Node Waveforms (\(V_{ds}\), \(V_{gs}\))
+  * See parameter sensitivity instantly — adjust switching frequency or load via sliders and watch the waveform evolve in real time.
 
-Switching node analysis including $V_{ds}$ and $V_{gs}$ visualization.
+* **🔄 Real-Time Feedback**
+  * No need to rerun code manually. Every parameter update recalculates flux, current, voltage, and ripple values on the spot.
 
-Real-time Updates: Adjust a slider for switching frequency or load and watch the waveforms update instantly.
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Python 3.x
+| Component | Purpose |
+|------------|----------|
+| **Python 3.x** | Core computation and interface logic |
+| **Streamlit** | Interactive and reactive web front-end |
+| **Plotly** | Beautiful, dynamic power electronics graphs |
+| **NumPy** | Fast numerical simulation and waveform math |
 
-Streamlit: For the interactive, reactive web interface.
+---
 
-Plotly: For zoomable, high-fidelity power electronics charts.
+## 📥 Quick Start
 
-NumPy: Powering the underlying physics and transient calculations.
+### 1️⃣ Install Dependencies
+  Run this in your terminal to set up your environment:
+    ```bash
+    pip install streamlit numpy plotly
+### 2️⃣ Launch the App
+    Navigate to the project directory and start your local Streamlit server:
+    ```bash
+    streamlit run app.py
 
-📥 Quick Start
+## 📖 How to Use It
+  1. Set Your Targets:
+  In the sidebar, enter V_in, V_out, Power, and switching frequency (f_sw).
 
-1. Install Dependencies
+  2. Pick Your Core:
+  Choose from the material library or input your own custom core parameters: 
+  A_e, L_e, μ_r.
 
-Run this in your terminal to get the environment ready:
+  3. Validate:
+  Check the “Saturation Check” indicator — if your B_max exceeds the core’s linear range, the tool will advise you to increase L or select a different core.
 
-pip install streamlit numpy plotly
+  4. Analyze:
+  Explore interactive plots for waveforms, ripple characteristics, and transient behaviour across different load and switching conditions.
 
+## 🎓 Educational Value
+Perfect for students, researchers, and engineers learning or teaching Power Electronics.
 
-2. Launch the App
+### Use it to explore:
 
-Navigate to the project folder and start the local server:
+1. The inverse relationship between Inductance (L) and ripple current.
 
-streamlit run app.py
+2. How switching frequency (f_sw) alters converter efficiency and current stress.
 
+3. The trade-off between core size and energy storage.
 
-📖 How to Use It
+4. The distinct waveform behaviors across Buck vs. Boost topologies.
 
-Set Your Targets: Use the sidebar to input $V_{in}$, $V_{out}$, Power, and your desired switching frequency ($f_{sw}$).
-
-Pick Your Core: Choose from a library of materials or enter custom parameters ($A_e, L_e, \mu_r$).
-
-Validate: Keep an eye on the "Saturation Check" indicator. If your $B_{max}$ exceeds your core's limits, the tool will warn you to increase $L$ or pick a larger core.
-
-Analyze: Scroll through the simulation results to inspect the transient behavior and steady-state ripple.
-
-🎓 Educational Value
-
-This is a great tool for Power Electronics students to visualize:
-
-How Inductance ($L$) and Switching Frequency ($f_{sw}$) inversely affect current ripple.
-
-The direct relationship between physical core size and energy storage.
-
-The difference in switching stress between different converter topologies.
-
-📜 License
-
+## 📜 License
 Distributed under the MIT License.
+See the LICENSE file for details.
 
-Built with ⚡ by Raymond Borres :)
+Built with ⚡ and passion by Raymond Borres™
