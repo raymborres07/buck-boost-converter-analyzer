@@ -1,4 +1,4 @@
-# ⚡ DC-DC Converter Designer
+# DC-DC Converter Designer
 
 Interactive **Power Electronics** design tool built with **Streamlit** + **Plotly**.
 
